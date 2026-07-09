@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # RookVPN leak test helper — checks public IP via RookCheck API.
-# WebRTC/DNS/IPv6 tests require a browser: https://check.rookvpn.com/vpn-leak-test
+# WebRTC/DNS/IPv6 tests require a browser: https://rookvpn.com/check/vpn-leak-test
 set -euo pipefail
 
-API_BASE="${ROOKCHECK_API:-https://check.rookvpn.com/api}"
+API_BASE="${ROOKCHECK_API:-https://rookvpn.com/check/api}"
 IP_ENDPOINT="${API_BASE}/ip/address"
 
 echo "=== RookVPN CLI Leak Test Helper ==="
@@ -16,7 +16,7 @@ if ! command -v curl >/dev/null 2>&1; then
   exit 1
 fi
 
-RESPONSE="$(curl -sf --max-time 15 "${IP_ENDPOINT}" 2>/dev/null)" || {
+RESPONSE="$(curl -sfL --max-time 15 "${IP_ENDPOINT}" 2>/dev/null)" || {
   echo "Error: failed to reach RookCheck API." >&2
   exit 1
 }
@@ -40,9 +40,9 @@ echo ""
 echo "--- Next steps ---"
 echo "1. Connect your VPN and run this script again — the IP should change."
 echo "2. Browser leak tests (WebRTC, DNS, IPv6):"
-echo "   https://check.rookvpn.com/vpn-leak-test/webrtc"
-echo "   https://check.rookvpn.com/vpn-leak-test/dns"
-echo "   https://check.rookvpn.com/vpn-leak-test/ipv6"
+echo "   https://rookvpn.com/check/vpn-leak-test/webrtc"
+echo "   https://rookvpn.com/check/vpn-leak-test/dns"
+echo "   https://rookvpn.com/check/vpn-leak-test/ipv6"
 echo ""
-echo "Hosted tool: https://check.rookvpn.com/vpn-leak-test"
+echo "Hosted tool: https://rookvpn.com/check/vpn-leak-test"
 echo "Docs:        https://rookvpn.com/docs/vpn-leak-testing-guide"

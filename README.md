@@ -23,15 +23,15 @@ With VPN disconnected, note the IP. Connect your VPN and run again — the visib
 
 | Leak type | Tool |
 |-----------|------|
-| WebRTC | [WebRTC leak test](https://check.rookvpn.com/vpn-leak-test/webrtc) |
-| DNS | [DNS leak test](https://check.rookvpn.com/vpn-leak-test/dns) |
-| IPv6 | [IPv6 leak test](https://check.rookvpn.com/vpn-leak-test/ipv6) |
+| WebRTC | [WebRTC leak test](https://rookvpn.com/check/vpn-leak-test/webrtc) |
+| DNS | [DNS leak test](https://rookvpn.com/check/vpn-leak-test/dns) |
+| IPv6 | [IPv6 leak test](https://rookvpn.com/check/vpn-leak-test/ipv6) |
 
 Full guide: [rookvpn.com/docs/vpn-leak-testing-guide](https://rookvpn.com/docs/vpn-leak-testing-guide)
 
 ## Hosted version
 
-No install required — use the full suite at **https://check.rookvpn.com/vpn-leak-test**
+No install required — use the full suite at **https://rookvpn.com/check/vpn-leak-test**
 
 ## License
 
